@@ -1,0 +1,14 @@
+{
+    "database":{
+        "source_column":"TipoId_persona",
+        "match_columns":["tipo"],
+        "output_columns":["Role"],
+        "query":"select tipo from DB.TIPOSPERSONA where {}",
+        "default":"",
+        "batch_size":10
+    },
+    "fixed_values":{
+        "State":"Activo",
+        "Reference":"03"
+    }
+}

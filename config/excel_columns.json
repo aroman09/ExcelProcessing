@@ -1,0 +1,8 @@
+{
+    "column_mapping":{
+        "Name": "Nombre",
+        "Identification": "Numero_identificacion",
+        "Country": "Pais"
+    }
+
+}

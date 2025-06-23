@@ -27,6 +27,8 @@ def main():
     column_order= list(columns_max.keys())
 
     df = cargar_excel(INPUT_FILE)
+
+    #df = aplicar_homologaciones(df, config_extra["homologations"])
     
     df = aplicar_valores_fijos(df, config_extra["fixed_values"])
 
@@ -115,6 +117,13 @@ def aplicar_valores_fijos(df, valores_fijos):
     for col, val in valores_fijos.items():
         df[col] = val
     return df
+
+def aplicar_homologaciones(df, homologaciones):
+    for col, mapa in homologaciones.items():
+        if col in df.columns:
+            df[col] = df[col].map(mapa).fillna(f"0")
+    return df
+
 
 def renombrar_columnas(df, mapping):
     for new_name, name_excel in mapping.items():

@@ -10,5 +10,12 @@
     "fixed_values":{
         "State":"Activo",
         "Reference":"03"
+    },
+    "homologations":{
+        "Tipo_Cuenta":{
+            "AHO":"4",
+            "CTE":"1",
+            "NIN":"2"
+        }
     }
 }
